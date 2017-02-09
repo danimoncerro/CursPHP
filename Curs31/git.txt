@@ -1,0 +1,11 @@
+1. Adaugare fisiere noi / modificari in GIT 
+
+git status # Verifica modificarile / fisiere noi 
+
+git add . # Adauga modificarile ( doar pregateste )
+git commit -m "Mesaj modificari" # Salveaza modificarile in proiect / repository si se defineste un mesaj 
+
+git push origin master # Salveaza modificarile pe github.com 
+
+
+2. 

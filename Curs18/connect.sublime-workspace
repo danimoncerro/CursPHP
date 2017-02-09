@@ -1,0 +1,449 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"check",
+				"checkMinimumAge"
+			],
+			[
+				"tabe",
+				"tabelObject"
+			],
+			[
+				"se",
+				"session_start"
+			],
+			[
+				"mysqli",
+				"mysqli_fetch"
+			],
+			[
+				"mysqli_",
+				"mysqli_query"
+			],
+			[
+				"mysql",
+				"mysql_query"
+			],
+			[
+				"session",
+				"session_start"
+			],
+			[
+				"ses",
+				"session_as_string"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"bor",
+				"border-right"
+			],
+			[
+				"le",
+				"border-left"
+			],
+			[
+				"hig",
+				"highlight1"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"fon",
+				"font-style"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"data",
+				"data_nasterii"
+			],
+			[
+				"numele",
+				"numele"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"nr",
+				"nr_elemente"
+			],
+			[
+				"return",
+				"return"
+			],
+			[
+				"pret",
+				"pret_achizitie"
+			],
+			[
+				"calcul",
+				"calculeaza_tva"
+			],
+			[
+				"cal",
+				"calculeaza"
+			],
+			[
+				"oper",
+				"operator_aerian"
+			],
+			[
+				"numarul",
+				"numarul_cursei"
+			],
+			[
+				"or",
+				"ora_aterizarii"
+			],
+			[
+				"ora",
+				"ora_decolarii"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/opt/lampp/htdocs/CursPHP/Curs29/ex6.php",
+		"/opt/lampp/htdocs/CursPHP/Curs29/ex5b.php",
+		"/opt/lampp/htdocs/CursPHP/Curs29/ex13.php",
+		"/opt/lampp/htdocs/CursPHP/Curs29/ex12b.php",
+		"/opt/lampp/htdocs/TemePHP/Tema29/Database.php",
+		"/opt/lampp/htdocs/TemePHP/Tema29/tema1.php",
+		"/opt/lampp/htdocs/CursPHP/Curs29/ex10.php",
+		"/opt/lampp/htdocs/CursPHP/Curs29/ex8d.php",
+		"/opt/lampp/htdocs/CursPHP/Curs29/ex8.php",
+		"/opt/lampp/htdocs/CursPHP/Curs29/ex8b.php",
+		"/opt/lampp/htdocs/CursPHP/Curs29/ex4.php",
+		"/opt/lampp/htdocs/CursPHP/Curs29/ex3.php",
+		"/opt/lampp/htdocs/CursPHP/Curs29/ex2.php",
+		"/opt/lampp/htdocs/CursPHP/Curs29/ex1.php",
+		"/opt/lampp/htdocs/TemePHP/Tema28/classes/Database.php",
+		"/opt/lampp/htdocs/TemePHP/Tema28/tema4.php",
+		"/opt/lampp/htdocs/TemePHP/Tema28/tema5.php",
+		"/opt/lampp/htdocs/TemePHP/Tema28/classes/Mar1.php",
+		"/opt/lampp/htdocs/TemePHP/Tema28/tema1.php",
+		"/opt/lampp/htdocs/CursPHP/Curs28/classes/User.php",
+		"/opt/lampp/htdocs/CursPHP/Curs28/classes/Student.php",
+		"/opt/lampp/htdocs/CursPHP/Curs28/ex9.php",
+		"/opt/lampp/htdocs/CursPHP/Curs28/ex10.php",
+		"/opt/lampp/htdocs/CursPHP/Curs28/tema",
+		"/opt/lampp/htdocs/CursPHP/Curs28/ex7.php",
+		"/opt/lampp/htdocs/TemePHP/Tema28/classes/Fruct.php",
+		"/opt/lampp/htdocs/TemePHP/Tema28/classes/Mar.php",
+		"/opt/lampp/htdocs/TemePHP/Tema28/tema2.php",
+		"/opt/lampp/htdocs/CursPHP/Curs28/ex13.php",
+		"/opt/lampp/htdocs/CursPHP/Curs27/Site_oop_php/class_lib.php",
+		"/opt/lampp/htdocs/TemePHP/Tema27/class_lib.php",
+		"/opt/lampp/htdocs/CursPHP/Curs27/temp.php",
+		"/opt/lampp/htdocs/TemePHP/Tema27/legume.php",
+		"/opt/lampp/htdocs/TemePHP/Tema27/legume1.php",
+		"/opt/lampp/htdocs/TemePHP/Tema27/class_lib1.php",
+		"/opt/lampp/htdocs/CursPHP/Curs27/Site_oop_php/legume.php",
+		"/opt/lampp/htdocs/Site_oop_php/classdog.php",
+		"/opt/lampp/htdocs/CursPHP/Curs27/Site_oop_php/classdog.php",
+		"/opt/lampp/htdocs/Site_oop_php/index.php",
+		"/opt/lampp/htdocs/Site_oop_php/case.php",
+		"/opt/lampp/htdocs/Site_oop_php/class_lib.php",
+		"/opt/lampp/htdocs/CursPHP/Curs27/tema.php",
+		"/opt/lampp/htdocs/CursPHP/Curs27/functions.php",
+		"/opt/lampp/htdocs/CursPHP/Curs27/class.Tabel.php",
+		"/opt/lampp/htdocs/CursPHP/Curs27/Site_oop_php/index1.php",
+		"/opt/lampp/htdocs/Site_oop_php/index1.php",
+		"/opt/lampp/htdocs/CursPHP/Curs27/ex4b.php",
+		"/opt/lampp/htdocs/CursPHP/Curs27/select.php",
+		"/opt/lampp/htdocs/CursPHP/Curs27/table.php",
+		"/opt/lampp/htdocs/CursPHP/Curs27/connect.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test9.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/editeaza_elev.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/tema_editeaza_localitate.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test10.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/tema_salveaza_localitate.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/functions.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/tema_index1.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/tema_editeaza_localitate1.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test11.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/salveaza_elev.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/tema1",
+		"/opt/lampp/htdocs/TemePHP/Tema23/tema_index.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/tema_salveaza_localitate1.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/editeaza_elev_original.php",
+		"/opt/lampp/htdocs/CursPHP/Curs2/ex7b.php",
+		"/opt/lampp/htdocs/CursPHP/Curs1/ex5.php",
+		"/opt/lampp/htdocs/CursPHP/Curs1/ex6.php",
+		"/opt/lampp/htdocs/CursPHP/Curs1/ex8.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test8.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test4_1.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test5.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test5_1.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test7_1.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/view_comanda.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/actualizare_cos.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test7.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/tema.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/index_logat.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/view_cart.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/formular_login.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/intrebari.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/style.css",
+		"/opt/lampp/htdocs/TemePHP/Tema23/header.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/comenzi.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/trimite_comanda.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/view_img.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test1.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test2.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test3.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test-input-array/form2.html",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test-input-array/form.html",
+		"/opt/lampp/htdocs/TemePHP/Tema23/test-input-array/process.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/add_to_cart.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/login.php",
+		"/opt/lampp/htdocs/CursPHP/Curs6/upload.php",
+		"/opt/lampp/htdocs/TemePHP/Tema23/upload_img.php",
+		"/opt/lampp/htdocs/CursPHP/Curs23/style.css",
+		"/opt/lampp/htdocs/CursPHP/Curs23/logout.php",
+		"/opt/lampp/htdocs/CursPHP/Curs23/login.php",
+		"/opt/lampp/htdocs/CursPHP/Curs23/header.php",
+		"/opt/lampp/htdocs/CursPHP/Curs23/index_logat.php",
+		"/opt/lampp/htdocs/CursPHP/Curs23/functions.php",
+		"/opt/lampp/htdocs/CursPHP/Curs23/tema.php",
+		"/opt/lampp/htdocs/CursPHP/Curs23/view_cart.php",
+		"/opt/lampp/htdocs/CursPHP/Curs23/trimite_comanda.php",
+		"/opt/lampp/htdocs/CursPHP/Curs23/sterge_produs.php",
+		"/opt/lampp/htdocs/CursPHP/Curs23/add_to_cart.php",
+		"/opt/lampp/htdocs/CursPHP/Curs23/index.php",
+		"/opt/lampp/htdocs/CursPHP/Curs23/header1.php",
+		"/opt/lampp/htdocs/TemePHP/Tema_test/index.php",
+		"/opt/lampp/htdocs/TemePHP/Tema_test/connect.php",
+		"/opt/lampp/htdocs/TemePHP/Tema_test/test2.php",
+		"/opt/lampp/htdocs/TemePHP/Tema_test/test1.php",
+		"/opt/lampp/htdocs/TemePHP/Tema_test/function.php",
+		"/opt/lampp/htdocs/TemePHP/Tema_test/index1.php",
+		"/opt/lampp/htdocs/TemePHP/Tema_test/index2.php",
+		"/opt/lampp/htdocs/TemePHP/Tema_test/function3.php",
+		"/opt/lampp/htdocs/TemePHP/Tema_test/index5.php",
+		"/opt/lampp/htdocs/TemePHP/Tema_test/function4.php",
+		"/opt/lampp/htdocs/TemePHP/Tema_test/index6.php",
+		"/opt/lampp/htdocs/TemePHP/Tema_test/index4.php",
+		"/opt/lampp/htdocs/TemePHP/Tema_test/index3.php",
+		"/opt/lampp/htdocs/CursPHP/Curs22/logout.php",
+		"/opt/lampp/htdocs/TemePHP/Tema20/logout.php",
+		"/opt/lampp/htdocs/CursPHP/Curs22/add_to_cart.php",
+		"/opt/lampp/htdocs/CursPHP/Curs22/functions.php",
+		"/opt/lampp/htdocs/CursPHP/Curs22/view_cart.php",
+		"/opt/lampp/htdocs/CursPHP/Curs22/tema.php"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"DriveMoto",
+			"logat",
+			";\n",
+			"masina",
+			"note",
+			"echo \"",
+			"userCount",
+			"\";",
+			"';",
+			"echo \"",
+			"echo '",
+			"include",
+			"dotted",
+			"<th>",
+			"th",
+			"\";",
+			"td",
+			"'",
+			"',",
+			"', ",
+			"echo $nr;"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "connect.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 235.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
