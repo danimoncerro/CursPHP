@@ -10,6 +10,14 @@ class User {
 	protected $password = '';
 	protected $email = '';
 	protected $valid = 0;
+	protected $conn = false ;
+
+	public function __construct() {
+		$db = new Database();
+		$this->conn = $db->getConnection();
+	}
+
+
 
 	public function setId($_id){
 		$this->id = $_id;
@@ -105,8 +113,7 @@ class User {
 		$sql = "SELECT * FROM ". self::TABLENAME . "
 				WHERE id = $id";
 
-		$db = new Database();
-		$stmt = $db->getConnection()->prepare($sql);
+		$stmt = $this->conn->prepare($sql);
 		$stmt->execute();
 		$result = $stmt->fetch();
 
@@ -129,8 +136,7 @@ class User {
 					valid = '$this->valid'
 				WHERE id= $this->id";
 
-		$db = new Database();
-		$stmt = $db->getConnection()->prepare($sql);
+		$stmt = $this->getConnection()->prepare($sql);
 		
 		if ($stmt->execute()) {
 			// Afisam un mesaj
@@ -225,6 +231,11 @@ class User {
 		$this->setValid(0);
 		$this->update();
 		
+    }
+
+
+    protected function getConnection() {
+    	return $this->conn;
     }
 }
 
