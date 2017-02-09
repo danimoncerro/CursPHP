@@ -1,0 +1,23 @@
+h1 {
+	color: red;
+	border: 1px black solid;
+}
+
+span {
+	color: orange;
+	border: 2px black solid;
+}
+
+.italpolina {
+	font-style: italic;
+}
+
+#pagina {
+	background-color: lightgray;
+	border: 3px black solid;
+	padding: 5px;
+}
+
+p {
+	font-size: 20px;
+}
