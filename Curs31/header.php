@@ -42,18 +42,18 @@
 
       <ul class="nav navbar-nav navbar-right">
         <?php if (check_logat()): ?>
-        <li><a href="http://localhost/TemePHP/Tema23/index_logat.php#despre">HOME</a></li>
-        <li><a href="http://localhost/TemePHP/Tema23/index_logat.php#portofoliu">PORTOFOLIU</a></li>
-        <li><a href="http://localhost/TemePHP/Tema23/index_logat.php#testimoniale">TESTIMONIALE</a></li>
-        <li><a href="http://localhost/TemePHP/Tema23/index_logat.php#magazin">MAGAZIN</a></li>  
-        <li><a href="http://localhost/TemePHP/Tema23/index_logat.php#contact">CONTACT</a></li>
+        <li><a href="index_logat.php#despre">HOME</a></li>
+        <li><a href="index_logat.php#portofoliu">PORTOFOLIU</a></li>
+        <li><a href="index_logat.php#testimoniale">TESTIMONIALE</a></li>
+        <li><a href="index_logat.php#magazin">MAGAZIN</a></li>  
+        <li><a href="index_logat.php#contact">CONTACT</a></li>
         <li><a href="comenzi.php">COMENZI</a></li>
         <?php else: ?>
-        <li><a href="http://localhost/TemePHP/Tema23/index.php#despre">DESPRE NOI</a></li>
-        <li><a href="http://localhost/TemePHP/Tema23/index.php#portofoliu">PORTOFOLIU</a></li>
-        <li><a href="http://localhost/TemePHP/Tema23/index.php#testimoniale">TESTIMONIALE</a></li>
-        <li><a href="http://localhost/TemePHP/Tema23/index.php#magazin">MAGAZIN</a></li>  
-        <li><a href="http://localhost/TemePHP/Tema23/index.php#contact">CONTACT</a></li>
+        <li><a href="index.php#despre">DESPRE NOI</a></li>
+        <li><a href="index.php#portofoliu">PORTOFOLIU</a></li>
+        <li><a href="index.php#testimoniale">TESTIMONIALE</a></li>
+        <li><a href="index.php#magazin">MAGAZIN</a></li>  
+        <li><a href="index.php#contact">CONTACT</a></li>
         <?php endif; ?>
 
         <?php if (check_logat()): ?>
