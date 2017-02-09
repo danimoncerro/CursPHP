@@ -8,4 +8,7 @@ git commit -m "Mesaj modificari" # Salveaza modificarile in proiect / repository
 git push origin master # Salveaza modificarile pe github.com 
 
 
-2. 
+2. Trage modificarile noi din GIT 
+
+git pull origin master # Incarca toate modificarile noi din GIT 
+

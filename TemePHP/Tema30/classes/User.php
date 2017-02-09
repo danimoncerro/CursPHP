@@ -90,10 +90,16 @@ class User {
 		$stmt = $db->getConnection()->prepare($sql);
 		$stmt->execute();
 		$results = $stmt->fetchAll();
-	
+
 		return $results; 
     }
 
+    /**
+     * Find an user by id 
+     *
+     * @param int $id - id of the user 
+     * @return array $user - all user information
+     */
     public function findOneById($id) {
 	
 		$sql = "SELECT * FROM ". self::TABLENAME . "
@@ -102,9 +108,16 @@ class User {
 		$db = new Database();
 		$stmt = $db->getConnection()->prepare($sql);
 		$stmt->execute();
-		$results = $stmt->fetch();
+		$result = $stmt->fetch();
 
-		return $results; 
+		// Save columns in properties 
+		$this->setId($result['id']);
+		$this->setUsername($result['username']);
+		$this->setEmail($result['email']);
+		$this->setPassword($result['password']);
+		$this->setValid($result['valid']);
+
+		return $result; 
 	}
 
     public function update(){
@@ -197,25 +210,20 @@ class User {
 		$nr++;
     }
 
+
     public function valideaza($id){
     	
-		$sql = "UPDATE " . self::TABLENAME . "
-				SET valid = 1
-				WHERE id= $id";
-
-		$db = new Database();
-		$db->getConnection()->exec($sql);
+		$this->findOneById($id);
+		$this->setValid(1);
+		$this->update();
 		
     }
 
     public function invalideaza($id){
     	
-		$sql = "UPDATE " . self::TABLENAME . "
-				SET valid = 0
-				WHERE id= $id";
-
-		$db = new Database();
-		$db->getConnection()->exec($sql);
+		$this->findOneById($id);
+		$this->setValid(0);
+		$this->update();
 		
     }
 }
