@@ -16,7 +16,6 @@
 </head>
 <body>
 
-
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -25,7 +24,6 @@
     <div class="collapse navbar-collapse" id="myNavbar">
 
      
-
     <?php if (check_logat()): ?>
       <ul class="nav navbar-nav navbar-left">
         <li><a href="logout.php">Logout</a></li>
@@ -68,7 +66,6 @@
     <?php endif ?>
 
     </ul>               
-
    
     </div>
   </div>
