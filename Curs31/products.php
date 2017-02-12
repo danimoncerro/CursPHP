@@ -1,6 +1,8 @@
-<?php include 'header.php'; ?>
-
 <?php 
+
+require_once 'classes/Database.php';
+
+include 'header.php';
 
 // de extras produsele din db  
 // construim sql-ul

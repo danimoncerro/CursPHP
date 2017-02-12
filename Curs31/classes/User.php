@@ -17,6 +17,10 @@ class User {
 		$this->conn = $db->getConnection();
 	}
 
+	protected function getConnection() {
+    	return $this->conn;
+    }
+
 	public function setId($_id){
 		$this->id = $_id;
 	}
@@ -168,7 +172,6 @@ class User {
 		$this->setValid($result['valid']);
 		
 		//return $result; 
-
 		
 		if ($result) {
     	// ok
@@ -180,9 +183,6 @@ class User {
     		exit;
 
    		} else {
-    		
-    		
-
     		
     		$_SESSION['message'] = 'Username-ul si/sau parola sunt gresite. ';
 
@@ -200,7 +200,6 @@ class User {
 
     		header("Location: formular_login.php");
     		//exit;
-
 			
   		}
 		
@@ -273,11 +272,7 @@ class User {
 		
     }
 
-    protected function getConnection() {
-    	return $this->conn;
-    }
-
-	public function logout() {
+    public function logout() {
 		
 		session_destroy();
 		header("Location: index.php");
