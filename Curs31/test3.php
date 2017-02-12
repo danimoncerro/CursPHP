@@ -1,32 +1,15 @@
 <?php
-include 'connect.php';
 
+session_start();
 
-$sql = "SELECT comenzi.* , users.username
-		FROM comenzi
-		LEFT JOIN users ON users.id = comenzi.id_user
-		ORDER BY comenzi.id DESC";
+$_SESSION['mesaj1'] = 'Ce faci ?';
 
-$stmt = $conn->prepare($sql);
+function afiseaza() {
 
-$stmt->execute();
+	echo $_SESSION['mesaj'] . "<br>" . $_SESSION['mesaj1'] . $_SESSION['message'];
 
-$result = $stmt->fetchAll();
-
-echo "<table border=1>";
-?>	<tr>
-		<th>NUMAR COMANDA</th>
-		<th>UTILIZATOR</th>
-		<th>DATA COMENZII</th>
-		<th>LEI</th>
-	</tr>
-<?php	
-foreach($result as $k=>$produs) {
-	echo "<tr>";
-		echo "<td>".$produs['id']."</td>";
-		echo "<td>".$produs['username']."</td>";
-		echo "<td>".date("d-m-Y H:i:s", $produs["created_at"])."</td>";
-		echo "<td>".$produs['total']."</td>";
-	echo "</tr>";
 }
-echo "</table>";
+
+afiseaza();
+
+

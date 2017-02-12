@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include 'header.php';
 
 // Daca este logat du-te pe index_logat.php
@@ -10,6 +11,19 @@ if (check_logat()) {
 
 
 ?>
+
+<?php if (isset($_SESSION['message'])): ?>
+
+<div class="alert alert-warning">
+	<?php echo "<br><br>" . $_SESSION['message']; ?>
+</div>
+
+<?php unset($_SESSION['message']); ?>
+<?php endif; ?>
+
+
+
+
 <!--
 <form action="login.php" method="post">
 <br><br><br><br><br>
@@ -21,7 +35,7 @@ if (check_logat()) {
 <br><br>
 <input type="submit" name="submit" value="Login">
 -->
-<br><br><br><br><br><br><br>
+<br><br><br>
 <div id="div2">
 <form action="login.php" method="post">
     <div>

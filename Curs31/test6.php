@@ -1,26 +1,18 @@
 <?php
-include 'connect.php';
 
-$sql = "SELECT * FROM judet";
+session_start();
+include 'test5.php';
 
-$stmt = $conn->prepare($sql);
+$sesiune = new Sesiune();
 
-$stmt->execute();
+$sesiune->afiseaza();
 
-$result = $stmt->fetchAll();
+echo "<br>";
+//echo $_SESSION['mesaj'];
+?>
 
-echo "<table border=1>";
-?>	<tr>
-		<th>ID</th>
-		<th>Nume</th>
-		<th>Localitate</th>
-	</tr>
-<?php	
-foreach($result as $k=>$value) {
-	echo "<tr>";
-		echo "<td>".$value['id']."</td>";
-		echo "<td>".$value['name']."</td>";
-		echo "<td>".$value['id']."</td>";
-	echo "</tr>";
-}
-echo "</table>";
+<script type="text/javascript">
+<!-- 
+    window.alert("Bine ai venit");
+//--> 
+</script>
