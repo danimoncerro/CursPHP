@@ -204,11 +204,6 @@ class User {
 			
   		}
 		
-
-
-
-
-
 	}
 
 	public function displayAll() {
@@ -278,21 +273,14 @@ class User {
 		
     }
 
-
     protected function getConnection() {
     	return $this->conn;
     }
 
-
-
-
-
-
-	
-
-
 	public function logout() {
 		
+		session_destroy();
+		header("Location: index.php");
 	}
 
 
