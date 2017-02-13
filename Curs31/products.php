@@ -1,24 +1,14 @@
 <?php 
 
-require_once 'classes/Database.php';
+require_once 'classes/Product.php';
 
 include 'header.php';
 
-// de extras produsele din db  
-// construim sql-ul
+$products = new Product();
 
-$sql = "SELECT * FROM products";
-
-// citim rezultatele
-
-$result = get_produse($sql);
-
-
+$result = $products->findAll();
 
 ?>
-
-
-
 
 <!-- Continut -->
 <div class="container">

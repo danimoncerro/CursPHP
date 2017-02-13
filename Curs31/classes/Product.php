@@ -122,50 +122,23 @@ class Product {
 		}		
     }
 
-    
-    // Echo all zboruri  in table 
-    public function displayAll() {
-    	
-    	echo "<table border=1>";
-		echo "<tr>";
-		echo "<th>Id</th>";
-		echo "<th>Ora decolare</th>";
-		echo "<th>Destinatia</th>";
-		echo "<th>Compania</th>";
-		echo "</tr>";
-
-		foreach($this->findAll() as $k => $zbor){ //parcugem arrayul pe linie
-			echo "<tr>";
-
-			echo "<td> " . $zbor["id"] . "</td>";
-			echo "<td> " . $zbor["ora_decolare"] . "</td>";
-			echo "<td> " . $zbor["destinatia"] . "</td>";
-			echo "<td> " . $zbor["compania"] . "</td>";
-			
-			echo "</tr>";
-		}
-
-		echo "</table>";
-    }
-
-    
     public function update(){
 
 		$sql = "UPDATE " . self::TABLENAME . "
-				SET ora_decolare = '$this->ora_decolare', 
-					destinatia = '$this->destinatia',
-					compania = '$this->compania'
+				SET tip = '$this->tip', 
+					soi = '$this->soi',
+					culoare = '$this->culoare',
+					pret = '$this->pret'
 				WHERE id= $this->id";
 
-		$db = new Database();
-		$stmt = $db->getConnection()->prepare($sql);
+		$stmt = $this->conn->prepare($sql);
 		
 		if ($stmt->execute()) {
 			// Afisam un mesaj
 			echo "Datele s-au actualizat cu succes.<br>";
 		} else {
 			// Afisam un mesaj
-			echo "Eroare actualizare zbor";
+			echo "Eroare actualizare date";
 		}
     }
 
