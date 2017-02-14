@@ -1,8 +1,21 @@
-<?php include 'header.php' ?>
-
 <?php
 
-$myCart = get_cart(); 
+session_start();
+
+require_once 'classes/Cart.php';
+include 'header.php';
+
+$id = $_GET['id'];
+
+$cart = new Cart();
+
+$cart->setId($id);
+$myCart = $cart->get();
+//echo "<br><br><br><br><br>";
+//echo "Salut.";
+//echo "<br>";
+//var_dump($myCart);
+//exit;
 echo "<br><br><br><br>";
 ?>
 
@@ -10,7 +23,7 @@ echo "<br><br><br><br>";
 	<div class="row">
 		
 		<div class="col-md-9">
-		  <h1>Cosul meu de cumparaturi contine <span><?php echo cart_count() . " produse"; ?> </span>:</h1>
+		  <h1>Cosul meu de cumparaturi contine <span><?php echo $cart->priceTotal() . " produse"; ?> </span>:</h1>
 
 		  <!-- Mesaj pentru alert -->
 			<?php if (isset($_SESSION['message'])): ?>
@@ -68,7 +81,7 @@ echo "<br><br><br><br>";
 		  </form>
 
 
-		  <h3>Valoare totala a cosului este <?php echo calculeaza_total(); ?> lei.</h3>
+		  <h3>Valoare totala a cosului este <?php echo $cart->priceTotal(); ?> lei.</h3>
 
 		  <a href="trimite_comanda.php" class="btn btn-sm btn-info">Trimite comanda</a>
 		 </div>

@@ -11,6 +11,7 @@ class Cart {
 	protected $culoare = '';
 	protected $pret = 0;
 	protected $cantitate = 0;
+	protected $mycart;
 	protected $conn = false ;
 
 	public function __construct() {
@@ -57,6 +58,18 @@ class Cart {
 		];
 	}
 
+	public function get() {
+		$idd = $this->id;
+		$results = $_SESSION['cart'][$this->id];
+		echo "<br><br><br><br>";
+		echo "Salut";
+		echo "<br>";
+		var_dump($results);
+		exit;
+		return $results; 
+
+
+	}
 
 	public function remove() {
 
@@ -64,8 +77,15 @@ class Cart {
 
 
 	public function priceTotal() {
+
+		if(isset($_SESSION['cart'])) {
+			$this->mycart = $_SESSION['cart'];
+			return count($this->mycart);
+		} else {
+			return 0;
+		}
 		
 	}
 
-
+	
 }
