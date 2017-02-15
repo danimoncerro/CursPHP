@@ -17,6 +17,9 @@ $myCart = $cart->get();
 //var_dump($myCart);
 //exit;
 echo "<br><br><br><br>";
+//echo "<pre>";
+//var_dump($myCart);
+//exit;
 ?>
 
 <div class="container">
@@ -50,7 +53,7 @@ echo "<br><br><br><br>";
 		  <?php foreach ($myCart as $produs): ?>
 		  	<tr>
 			  	<td>
-			  		<?php echo $produs["id"] ?>
+			  		<?php echo $produs["id"]; ?>
 			  	</td>
 			  	<td>
 			  	    <?php echo $produs["title"] ?>

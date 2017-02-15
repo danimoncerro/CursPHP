@@ -13,6 +13,7 @@ class Cart {
 	protected $cantitate = 0;
 	protected $mycart;
 	protected $conn = false ;
+	protected $cart = [];
 
 	public function __construct() {
 		$db = new Database();
@@ -47,6 +48,8 @@ class Cart {
 
 		$product  = $result[0]; // primul element - este singurul element pt ca am cautat dupa id unic.
 
+		
+
 		// 2. Adauga in cos 
 		$_SESSION['cart'][$this->id] = [
 			"id" => $this->id,
@@ -56,17 +59,20 @@ class Cart {
 			"pret" => $product["pret"],
 			"cantitate" => $this->cantitate,
 		];
+		//echo "<pre>";
+		//var_dump($_SESSION['cart'][$this->id]);
+		//exit;
 	}
 
 	public function get() {
-		$idd = $this->id;
-		$results = $_SESSION['cart'][$this->id];
+		$this->cart = $_SESSION['cart'][$this->id];
 		echo "<br><br><br><br>";
 		echo "Salut";
-		echo "<br>";
-		var_dump($results);
-		exit;
-		return $results; 
+		//echo "<br>";
+		//echo "<pre>";
+		//var_dump($results);
+		//exit;
+		return $this->cart; 
 
 
 	}
