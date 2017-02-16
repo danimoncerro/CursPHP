@@ -59,19 +59,11 @@ class Cart {
 			"pret" => $product["pret"],
 			"cantitate" => $this->cantitate,
 		];
-		//echo "<pre>";
-		//var_dump($_SESSION['cart'][$this->id]);
-		//exit;
+		
 	}
 
 	public function get() {
 		$this->cart = $_SESSION['cart'][$this->id];
-		echo "<br><br><br><br>";
-		echo "Salut";
-		//echo "<br>";
-		//echo "<pre>";
-		//var_dump($results);
-		//exit;
 		return $this->cart; 
 
 

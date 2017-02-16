@@ -21,20 +21,6 @@ if (check_logat()) {
 <?php unset($_SESSION['message']); ?>
 <?php endif; ?>
 
-
-
-
-<!--
-<form action="login.php" method="post">
-<br><br><br><br><br>
-<label>Username</label>
-<input type="text" name="username" placeholder="Introduceti username">
-<br>
-<label>Password</label>
-<input type="password" name="password" placeholder="Introduceti parola">;
-<br><br>
-<input type="submit" name="submit" value="Login">
--->
 <br><br><br>
 <div id="div2">
 <form action="login.php" method="post">

@@ -11,9 +11,7 @@ class Database {
 	// Ne conectam la baza de date 
 	public function __construct() {
 		try {
-			$this->conn = new PDO("mysql:host=$this->server;dbname=$this->database", 
-								$this->username, 
-								$this->password);
+			$this->conn = new PDO("mysql:host=$this->server;dbname=$this->database", $this->username, $this->password);
 		}
 		catch (PDOException $e) {
 			echo "Conexiune esuata: " . $e->getMessage();
