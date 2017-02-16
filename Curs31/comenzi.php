@@ -1,22 +1,17 @@
-<?php include 'header.php' ?>
+<?php include 'header.php';
 
-<?php
+$order = new Order();
+$comenzi = $order->findAll(); 
+$nr_comenzi = count($comenzi);
 
-//$id = $_SESSION['user_id'];
-$sql = "SELECT comenzi.* , users.username
-		FROM comenzi
-		LEFT JOIN users ON users.id = comenzi.id_user
-		ORDER BY comenzi.id DESC";
-$comenzi = get_comenzi($sql); 
-
-echo "<br><br><br><br>";
 ?>
 
+<br><br><br><br>
 <div class="container">
 	<div class="row">
 		
 		<div class="col-md-9">
-		  <h1>Aveti in total un numar de  <span><?php echo count($comenzi) . " comenzi"; ?> </span>:</h1>
+		  <h1>Aveti in total un numar de  <span><?php echo $nr_comenzi . " comenzi"; ?> </span>:</h1>
           <br>
 		  <!-- Mesaj pentru alert -->
 			<?php if (isset($_SESSION['message'])): ?>
@@ -63,6 +58,7 @@ echo "<br><br><br><br>";
 
 
 		  <h3>Valoarea totala a comenzilor este <?php echo $total_val; ?> lei.</h3>
+		  <h3>Valoarea medie a comenzilor este <?php echo $total_val / $nr_comenzi; ?> lei.</h3>
 	</div>
 </div>
 

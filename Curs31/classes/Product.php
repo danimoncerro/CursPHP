@@ -1,6 +1,5 @@
 <?php
 
-require_once 'Database.php';
 
 class Product {
 
@@ -66,7 +65,8 @@ class Product {
 		// Citim toate datele din tabelul products 
 	public function findAll(){
     
-		$sql = 'SELECT * FROM ' . self::TABLENAME;
+		$sql = 'SELECT products.*, culori.culoarea FROM ' . self::TABLENAME . '
+				LEFT JOIN culori on culori.id = products.culoare';
 
     	$stmt = $this->conn->prepare($sql);
 		$stmt->execute();

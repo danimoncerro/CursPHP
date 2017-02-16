@@ -1,21 +1,17 @@
 <?php 
   
-  session_start();
-  include 'classes/Cart.php';
+  include 'config.php';
   
   
   $id = $_GET['id'];
-  
   $cantitate = $_GET["cantitate"];
 
   $cart = new Cart();
-
-  $cart->setId($id);
-  $cart->setCantitate($cantitate);
-  $cart->add();
+  $cart->add($id, $cantitate);
   
+
   $_SESSION['message'] = "Am adaugat produsul in cosul de cumparaturi";
 
-  header("Location: view_cart.php?id=$id");
+  header("Location: view_cart.php");
  
   exit;

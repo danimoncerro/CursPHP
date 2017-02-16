@@ -62,114 +62,114 @@ function check_logat() {
 
 }
 
-function get_produse($sql) {
+// function get_produse($sql) {
 
-	global $conn;
+// 	global $conn;
 
-	// pregatim sql-ul
+// 	// pregatim sql-ul
 
-	$stmt = $conn->prepare($sql);
+// 	$stmt = $conn->prepare($sql);
 
-	// executam sql-ul
+// 	// executam sql-ul
 
-	$stmt->execute();
+// 	$stmt->execute();
 
-	// citire rezultate
+// 	// citire rezultate
 
-	return $stmt->fetchAll();
-}
-
-
-// Return products from cart
-function get_cart() {
-	$cart = [];
-
-	if (isset($_SESSION['cart'])) {
-		$cart = $_SESSION['cart'];
-	}
-
-	return $cart;
-
-}
+// 	return $stmt->fetchAll();
+// }
 
 
-// Add to cart 
-function add_to_cart($id_product, $cantitate = 1) {
-	global $conn;
+// // Return products from cart
+// function get_cart() {
+// 	$cart = [];
 
-	// 1. Citeste datele produsului din baza de date 
-	$sql = "SELECT products.*, culori.culoarea
-			FROM products
-			LEFT JOIN culori on products.culoare=culori.id
-			WHERE products.id = $id_product";
+// 	if (isset($_SESSION['cart'])) {
+// 		$cart = $_SESSION['cart'];
+// 	}
 
-	$stmt = $conn->prepare($sql);
+// 	return $cart;
 
-	$stmt->execute();
+// }
 
-	$result = $stmt->fetchAll();
 
-	$product  = $result[0]; // primul element - este singurul element pt ca am cautat dupa id unic.
+// // Add to cart 
+// function add_to_cart($id_product, $cantitate = 1) {
+// 	global $conn;
 
-	// 2. Adauga in cos 
-	$_SESSION['cart'][$id_product] = [
-		"id" => $id_product,
-		"title" => $product["tip"],
-		"soi"	 => $product["soi"],
-		"culoare" =>  $product["culoarea"],
-		"pret" => $product["pret"],
-		"cantitate" => $cantitate,
-	];
-}
+// 	// 1. Citeste datele produsului din baza de date 
+// 	$sql = "SELECT products.*, culori.culoarea
+// 			FROM products
+// 			LEFT JOIN culori on products.culoare=culori.id
+// 			WHERE products.id = $id_product";
 
-// Update cart 
-function update_cart_product($id_product, $cantitate = 1) {
-	// $_SESSION['cart'][$id_product]['cantitate'] = $cantitate;
+// 	$stmt = $conn->prepare($sql);
 
-	// Varianta cu 2 nivele de array
-	// Pas1: Citim cart-ul din sesiune
-	$cart = $_SESSION['cart'];
+// 	$stmt->execute();
 
-	// Pas2: Modificam cantitatea pentru produsul selectat
-	$cart[$id_product]['cantitate'] = $cantitate;
+// 	$result = $stmt->fetchAll();
 
-	// Pas3: Scriem in sesiune noul cart . 
-	$_SESSION['cart'] = $cart; 
-}
+// 	$product  = $result[0]; // primul element - este singurul element pt ca am cautat dupa id unic.
 
-function calculeaza_total() {
-	$mycart = $_SESSION['cart'];
-	$total = 0;
-	foreach ($mycart as $k=>$produs) {
-		$total+=$produs["cantitate"] * $produs["pret"];
-	} 
-	return $total;
-}
+// 	// 2. Adauga in cos 
+// 	$_SESSION['cart'][$id_product] = [
+// 		"id" => $id_product,
+// 		"title" => $product["tip"],
+// 		"soi"	 => $product["soi"],
+// 		"culoare" =>  $product["culoarea"],
+// 		"pret" => $product["pret"],
+// 		"cantitate" => $cantitate,
+// 	];
+// }
 
-function cart_count() {
-	if (isset($_SESSION['cart'])) {
-		$mycart = $_SESSION['cart'];
-		return count($mycart);
-	} else {
-		return 0;
-	}
-}
+// // Update cart 
+// function update_cart_product($id_product, $cantitate = 1) {
+// 	// $_SESSION['cart'][$id_product]['cantitate'] = $cantitate;
 
-function get_comenzi($sql) {
+// 	// Varianta cu 2 nivele de array
+// 	// Pas1: Citim cart-ul din sesiune
+// 	$cart = $_SESSION['cart'];
 
-	global $conn;
+// 	// Pas2: Modificam cantitatea pentru produsul selectat
+// 	$cart[$id_product]['cantitate'] = $cantitate;
 
-	// pregatim sql-ul
+// 	// Pas3: Scriem in sesiune noul cart . 
+// 	$_SESSION['cart'] = $cart; 
+// }
 
-	$stmt = $conn->prepare($sql);
+// function calculeaza_total() {
+// 	$mycart = $_SESSION['cart'];
+// 	$total = 0;
+// 	foreach ($mycart as $k=>$produs) {
+// 		$total+=$produs["cantitate"] * $produs["pret"];
+// 	} 
+// 	return $total;
+// }
 
-	// executam sql-ul
+// function cart_count() {
+// 	if (isset($_SESSION['cart'])) {
+// 		$mycart = $_SESSION['cart'];
+// 		return count($mycart);
+// 	} else {
+// 		return 0;
+// 	}
+// }
 
-	$stmt->execute();
+// function get_comenzi($sql) {
 
-	// citire rezultate
+// 	global $conn;
 
-	return $stmt->fetchAll();
-}
+// 	// pregatim sql-ul
+
+// 	$stmt = $conn->prepare($sql);
+
+// 	// executam sql-ul
+
+// 	$stmt->execute();
+
+// 	// citire rezultate
+
+// 	return $stmt->fetchAll();
+// }
 
 

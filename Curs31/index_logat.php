@@ -222,18 +222,9 @@ if(!check_logat()){
 
 <?php 
 
-// de extras produsele din db  
-// construim sql-ul
-
-$sql = "SELECT
-        products.*, 
-        culori.culoarea
-        FROM `products`
-        LEFT JOIN culori on culori.id=products.culoare";
-
-// citim rezultatele
-
-$result = get_produse($sql);
+// Extragem toate produsele 
+$product = new Product();
+$result = $product->findAll();
 
 ?>
 
@@ -251,7 +242,7 @@ $result = get_produse($sql);
 
 					<?php
 					foreach ($result as $k=>$produs){
-						
+
 						$id = $produs['id'];
 
 						echo "<tr>";

@@ -1,16 +1,10 @@
 <?php 
 
-require_once 'Database.php';
 
 class Cart {
 
-	const TABLENAME = "products"; 
-	protected $id = 0;
-	protected $tip = '';
-	protected $soi = '';
-	protected $culoare = '';
-	protected $pret = 0;
-	protected $cantitate = 0;
+	const PRODUCTS_TABLENAME = "products"; 
+
 	protected $mycart;
 	protected $conn = false ;
 	protected $cart = [];
@@ -24,66 +18,78 @@ class Cart {
     	return $this->conn;
     }
 
-    public function setId($_id) {
-    	$this->id = $_id;
-    }
 
-    public function setCantitate ($_cantitate) {
-    	$this->cantitate = $_cantitate;
-    }
-
-
-	public function add() {
+	public function add($id_product, $cantitate = 1) {
 
 		$sql = "SELECT products.*, culori.culoarea
 			FROM products
 			LEFT JOIN culori on products.culoare=culori.id
-			WHERE products.id = $this->id";
+			WHERE products.id = $id_product";
 
 		$stmt = $this->conn->prepare($sql);
-
 		$stmt->execute();
-
 		$result = $stmt->fetchAll();
-
 		$product  = $result[0]; // primul element - este singurul element pt ca am cautat dupa id unic.
-
-		
+	
 
 		// 2. Adauga in cos 
-		$_SESSION['cart'][$this->id] = [
-			"id" => $this->id,
+		$_SESSION['cart'][$id_product] = [
+			"id" => $id_product,
 			"title" => $product["tip"],
 			"soi"	 => $product["soi"],
 			"culoare" =>  $product["culoarea"],
 			"pret" => $product["pret"],
-			"cantitate" => $this->cantitate,
+			"cantitate" => $cantitate,
 		];
 		
 	}
 
+	// Get cart object with all products 
 	public function get() {
-		$this->cart = $_SESSION['cart'][$this->id];
-		return $this->cart; 
-
-
+		return $_SESSION['cart']; 
 	}
 
-	public function remove() {
-
+	// Remove product by id from cart
+	public function remove($id_product) {
+		unset($_SESSION['cart'][$id_product]);
 	}
 
 
+	// Calculeaza totalul 
+	// total = total + pret * cantitate
 	public function priceTotal() {
 
+		$total = 0;
 		if(isset($_SESSION['cart'])) {
-			$this->mycart = $_SESSION['cart'];
-			return count($this->mycart);
-		} else {
-			return 0;
-		}
-		
+			foreach ($_SESSION['cart'] as $item) {
+				$total += $item['pret'] * $item['cantitate'];
+			}
+		} 
+
+		return $total;
 	}
 
+	// Returneaza nr de produse in cos 
+	public function count() {
+		if (isset($_SESSION['cart'])) {
+			return count($_SESSION['cart']);	
+		}
+
+		return 0;
+	}
 	
+
+	// Actualizeaza un produs in cos 
+	public function updateProduct($id_product, $cantitate = 1) {
+		
+		// Pas1: Citim cart-ul din sesiune
+		$cart = $_SESSION['cart'];
+
+		// Pas2: Modificam cantitatea pentru produsul selectat
+		$cart[$id_product]['cantitate'] = $cantitate;
+
+		// Pas3: Scriem in sesiune noul cart . 
+		$_SESSION['cart'] = $cart; 
+	}
+
 }

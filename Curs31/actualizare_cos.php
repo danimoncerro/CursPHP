@@ -1,7 +1,8 @@
 <?php 
 
-include 'connect.php';
-include 'functions.php';
+include 'config.php';
+
+$cart = new Cart();
 
 // Se citesc valorile sub forma de array 
 $ids = $_GET["id"];
@@ -11,7 +12,7 @@ $cantitati = $_GET["cantitate"];
 foreach ($ids as $k => $id) {
 	$cantitate = $cantitati[$k];
 
-	update_cart_product($id, $cantitate);	
+	$cart->updateProduct($id, $cantitate);	
 }
 
 $_SESSION['message'] = "Cosul a fost actualizat cu succes";

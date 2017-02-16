@@ -24,3 +24,8 @@ git checkout 748923fkjdsnfksdnfkjsdjkfsd
 ==============================================
 
 git checkout master 
+
+
+5. Sters din sublime, sterge din git 
+========================================================
+git ls-files --deleted -z | xargs -0 git rm 

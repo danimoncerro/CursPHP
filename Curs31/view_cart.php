@@ -1,15 +1,11 @@
 <?php
 
-session_start();
-
-require_once 'classes/Cart.php';
 include 'header.php';
 
 $id = $_GET['id'];
 
 $cart = new Cart();
 
-$cart->setId($id);
 $myCart = $cart->get();
 //echo "<br><br><br><br><br>";
 //echo "Salut.";
@@ -26,7 +22,7 @@ echo "<br><br><br><br>";
 	<div class="row">
 		
 		<div class="col-md-9">
-		  <h1>Cosul meu de cumparaturi contine <span><?php echo $cart->priceTotal() . " produse"; ?> </span>:</h1>
+		  <h1>Cosul meu de cumparaturi contine <span><?php echo $cart->count() . " produse"; ?> </span>:</h1>
 
 		  <!-- Mesaj pentru alert -->
 			<?php if (isset($_SESSION['message'])): ?>

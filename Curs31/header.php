@@ -1,7 +1,4 @@
-<?php 
-	require 'connect.php'; 
-	require 'functions.php';
-?>
+<?php require 'config.php';  ?>
 
 <!DOCTYPE html>
 
@@ -55,11 +52,12 @@
         <?php endif; ?>
 
         <?php if (check_logat()): ?>
+        <?php $cart = new Cart(); ?>
           <ul class="nav navbar-nav navbar-left">
             <li>
               <a href="view_cart.php">
                 COSUL MEU
-                <span class="badge"><?php echo cart_count(); ?> </span>
+                <span class="badge"><?php echo $cart->count(); ?> </span>
               </a>
             </li> 
           </ul>

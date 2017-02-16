@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once 'classes/User.php';
+require_once 'config.php';
 
 
 if(isset($_POST['submit'])){
