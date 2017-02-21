@@ -20,7 +20,6 @@ class Leguma {
     public function findAll() {
     	
     	$sql = "SELECT * FROM ". self::TABLENAME . "";
-
     	$stmt = $this->conn->prepare($sql);
     	$stmt->execute();
     	$result = $stmt->fetchAll();
