@@ -18,33 +18,33 @@ class Cart {
 	}
 
 	public function add($_id, $_cantitate) {
-		$_SESSION['id'] = $_id;
-		$_SESSION['cantitate'] = $_cantitate;
-
-		$_SESSION['cart'][$id_product] = [
-			"id" => $id_product,
-			"title" => $product["tip"],
-			"soi"	 => $product["soi"],
-			"culoare" =>  $product["culoarea"],
-			"pret" => $product["pret"],
-			"cantitate" => $cantitate,
-		];
-
-		
-				
-	}
-
-	public function display() {
-		$this->id = $_SESSION['id'];
-		$this->cantitate = $_SESSION['cantitate'];
 
 		$sql = "SELECT * FROM ". self::TABLENAME . "
-				WHERE id = $this->id ";
+				WHERE id = $_id ";
 
 		$stmt = $this->getConnection()->prepare($sql);
 		$stmt->execute();
 		$result = $stmt->fetchAll();
-						
+
+		foreach ($result as $k=>$leguma) {
+
+		$_SESSION['cart1'][$_id] = [
+			"id" => $_id,
+			"denumire" => $leguma['denumire'],
+			"pret"	 => $leguma["pret"],
+			"cantitate" =>  $_cantitate,
+			
+		];
+
+		}
+				
+	}
+
+	public function display() {
+
+		?>
+		<form action="actualizare_cos.php" method="GET">
+		<?php
 		echo "<table border=1>";
     		echo "<tr>"; 
     			echo "<th>Id</th>";
@@ -54,35 +54,64 @@ class Cart {
     			echo "<th>Actiuni</th>";
     		echo "</tr>";
     	
-    	$_id = 1;
+    	$_id1 = 1;
 
-    	foreach ($result as $k=>$leguma) {
+    	if(isset($_SESSION['cart1'])) {
+    		$result = $_SESSION['cart1'];
+    	
+    		foreach ($result as $k=>$leguma) {
     		
-    		echo "<tr>";
-    			echo "<td>" . $_id . "</td>";
-    			echo "<td>" . $leguma['denumire'] . "</td>";
-    			echo "<td>" . $leguma['pret'] . "</td>";
+    			echo "<tr>";
+    				echo "<td>" . $_id1 . "</td>"; 
+    				echo "<td>" . $leguma['denumire'] . "</td>";
+    				echo "<td>" . $leguma['pret'] . "</td>";
     		?>
-    			<td>
-
-			  		<input type="hidden" value="<?php echo $produs["id"] ?>" name="id[]">
-                  	<input type="number" name="cantitate[]" min="1" max="500" value="<?php echo $this->cantitate; ?>">
+    				<td>
+			  			<input type="hidden" name="id" value="<?php echo $leguma["id"] ?>" >
+	                  	<input type="number" name="cantitate" min="1" max="500" value="<?php echo $leguma['cantitate']; ?>">
 			  		
-			  	</td>
+				  	</td>
 							
-    			<td>
-			  		<a href="sterge_produs.php?id=<?php echo $produs["id"]; ?>" class="btn btn-sm btn-danger">Sterge</a>
-			  	</td>
+    				<td>
+				  		<a href="stergere_produs.php?id=<?php echo $leguma["id"]; ?>" class="btn btn-sm btn-danger">Sterge</a>
+			  		</td>
 
   			<?php
 
-			echo "</tr>";
-				$_id++;
-    		
+				echo "</tr>";
+					$_id1++;
+    		} 
+    	} else {
+    		echo "<h3>Cosul tau este gol</h3>";
     	}
 
     	echo "</table>";
+
+    	?>
+    	<br>
+    	<input type="submit" name="submit" value="Actualizare cos">
+		</form>
+
+		<?php
+    	
+    }
+
+	public function deleteProduct($id) {
+		
+		unset($_SESSION['cart1'][$id]);
+		$_SESSION['message'] = "Produsul a fost sters din cos";
+
+	}
+
+	public function golireCos() {
+		
+		session_destroy();
+		header("Location: start.php");
+	}
+
+	public function actualizare($id, $cantitate){
 		
 	}
+
 
 }
