@@ -67,8 +67,8 @@ class Cart {
     				echo "<td>" . $leguma['pret'] . "</td>";
     		?>
     				<td>
-			  			<input type="hidden" name="id" value="<?php echo $leguma["id"] ?>" >
-	                  	<input type="number" name="cantitate" min="1" max="500" value="<?php echo $leguma['cantitate']; ?>">
+			  			<input type="hidden" name="id[]" value="<?php echo $leguma["id"] ?>" >
+	                  	<input type="number" name="cantitate[]" min="1" max="500" value="<?php echo $leguma['cantitate']; ?>">
 			  		
 				  	</td>
 							
@@ -109,8 +109,25 @@ class Cart {
 		header("Location: start.php");
 	}
 
-	public function actualizare($id, $cantitate){
+
+	/**
+	 * Actualizeaza cosul 
+	 *
+	 * @param array $ids - contine idurile produselor 
+	 * @param array $cantitati - contine cantitatile produselor 
+	 *
+	 * @return void
+	 */ 
+	public function actualizare(array $ids, array $cantitati){
 		
+		for ($i = 0; $i < count($ids); $i++) {
+			$id_product = $ids[$i];
+			
+			$cart = $_SESSION['cart1'];
+			$cart[$id_product]["cantitate"] = $cantitati[$i];
+			$_SESSION['cart1'] = $cart;
+		}
+
 	}
 
 

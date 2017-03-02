@@ -2,8 +2,12 @@
 
 require_once 'config.php';
 
+// array
 $id = $_GET['id'];
+// array 
 $cantitate = $_GET['cantitate'];
+
+
 
 $cart = new Cart();
 $cart->actualizare($id, $cantitate);
