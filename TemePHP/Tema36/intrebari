@@ -1,0 +1,5 @@
+1) Ce face urmatoarea sintaxa ?
+
+Auth::routes();
+
+2) Nu am folderele auth si layouts in resources/views

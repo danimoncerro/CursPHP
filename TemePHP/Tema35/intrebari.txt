@@ -1,0 +1,58 @@
+1) Ce inseamna codul urmator:
+
+caz A: 
+Recomandat: <?= $name; ?>
+Ok: <?php echo $name; ?>
+
+caz A:
+Bad: <? $a = 3; ?>
+Recomandat: <?php $a = 3; ?>
+
+@ $name='gelu';
+
+
+2) Cum putem genera (introduce date cu seed) in baza de date dar numai pentru un anumit tabel ?
+
+php artisan db:seed --class=ProductsTableSeeder
+
+
+3. Regenerare tot: migrare + seed
+php artisan migrate:refresh --seed
+
+
+
+
+pagina de listare pentru 5 tabele: route, controller, model, view
+vezi exemplu din clasa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+
+php artisan make:migration newsletter
+
+php artisan migrate
+
+php artisan make:seeder newsletterTableSeeder
+
+php artisan db:seed
+
+94478332 Fan Courier
+
+
+
+
+
