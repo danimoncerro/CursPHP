@@ -11,7 +11,7 @@
 				<tr>
 					<th>Id</th>
 					<th>Destinatia</th>
-					<th>Compania</th>
+					<th>Compania aeriana</th>
 				</tr>
 
 				@foreach($externe as $extern)
