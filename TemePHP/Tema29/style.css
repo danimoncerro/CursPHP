@@ -1,0 +1,56 @@
+table {
+	border-spacing:2;
+    border-collapse:collapse;
+}
+
+table th, table td {
+	padding: 20px;
+    border: 2px #000 solid; 
+   
+
+}
+
+.highlight td {
+    	background-color: lightgray;
+}
+
+table.table1 {
+	background-color: white;
+	width: 85%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px gray solid; 
+	padding: 2px;
+}
+
+body {
+	background-color: lightblue;
+}
+
+h2 {
+	padding: 10px;
+	font-size: 2em;
+	font-style: arial;
+	vertical-align: top;
+	color: darkblue;
+	text-align: center;
+}
+h3 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.error {
+	padding: 10px;
+	background-color: #dd0000;
+	border: 1px solid #660000;
+    color: #ffffff;	
+}
+
+span {
+	color: white;
+	background-color: #dd0000;
+	border: 1px solid #660000;
+	
+}

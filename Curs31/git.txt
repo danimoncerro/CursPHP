@@ -1,0 +1,31 @@
+1. Adaugare fisiere noi / modificari in GIT 
+==============================================
+
+git status # Verifica modificarile / fisiere noi 
+
+git add . # Adauga modificarile ( doar pregateste )
+git commit -m "Mesaj modificari" # Salveaza modificarile in proiect / repository si se defineste un mesaj 
+
+git push origin master # Salveaza modificarile pe github.com 
+
+
+2. Trage modificarile noi din GIT 
+==============================================
+
+git pull origin master # Incarca toate modificarile noi din GIT 
+
+
+3. Revenire la versiunea dorita
+==============================================
+
+git checkout 748923fkjdsnfksdnfkjsdjkfsd 
+
+4. Revenire la branchul master 
+==============================================
+
+git checkout master 
+
+
+5. Sters din sublime, sterge din git 
+========================================================
+git ls-files --deleted -z | xargs -0 git rm 

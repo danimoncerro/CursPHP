@@ -1,0 +1,25 @@
+h1 {
+	background-color: orange;
+}
+
+span {
+	background-color: orange;
+}
+
+#page {
+	border: 1px black solid;
+	padding: 6px;
+	background-color: lightgray;
+}
+
+p {
+	font-size: 18px;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
