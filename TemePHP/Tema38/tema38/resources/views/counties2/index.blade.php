@@ -5,24 +5,26 @@
 	<div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h1>Orase2</h1>
+			<h1>Judete2</h1>
 			<table class="table table-bordered">
 				<tr>
 					<th>Id</th>
 					<th>Name</th>
-					<th>Judet</th>
-				</tr>
-				@foreach($cities2 as $city2)
+				</tr> 
+				@foreach($counties2 as $county2)
 					<tr>
-						<td>{{ $city2->id }}</td>
-						<td>{{ $city2->name }}</td>
-						<td>{{ $city2->county2_id }}
+						<td>{{ $county2->id }}</td>
+						<td>
+							<a href="counties2/{{$county2->id}}">
+								{{ $county2->name }}
+							</a>
+						</td>
 					</tr>
 				@endforeach
 			</table>
 		</div>
 	</div>
 	</div>
+		
 
 @endsection
-

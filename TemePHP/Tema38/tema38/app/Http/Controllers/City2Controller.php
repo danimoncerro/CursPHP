@@ -10,5 +10,6 @@ class City2Controller extends Controller
  	public function index(){
  		$cities2 = City2::all();
  		return view('cities2.index', compact('cities2'));
- 	}   
+ 	} 
+
 }

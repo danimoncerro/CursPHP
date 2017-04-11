@@ -26,3 +26,5 @@ Route::get('cities1', 'City1Controller@index');
 Route::get('counties1', 'County1Controller@index');
 Route::get('counties1/{id}', 'County1Controller@cities1');
 Route::get('cities2', 'City2Controller@index');
+Route::get('counties2', 'County2Controller@index');
+Route::get('counties2/{id}', 'County2Controller@cities2');
